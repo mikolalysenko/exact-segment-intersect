@@ -1,0 +1,42 @@
+{
+  "name": "exact-segment-intersect",
+  "version": "1.0.0",
+  "description": "Exactly constructs the intersection of two line segments",
+  "main": "intersect.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "robust-compress": "^1.0.0",
+    "robust-scale": "^1.0.2",
+    "two-product": "^1.0.2",
+    "robust-sum": "^1.0.0"
+  },
+  "devDependencies": {
+    "robust-compare": "~1.0.0",
+    "robust-determinant": "~1.1.0",
+    "robust-product": "~1.0.0",
+    "robust-subtract": "~1.0.0",
+    "tape": "~2.13.2",
+    "validate-robust-sequence": "~1.0.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/exact-segment-intersect.git"
+  },
+  "keywords": [
+    "line",
+    "segment",
+    "exact",
+    "intersect"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/exact-segment-intersect/issues"
+  },
+  "homepage": "https://github.com/mikolalysenko/exact-segment-intersect"
+}
