@@ -2,6 +2,10 @@ exact-segment-intersection
 ==========================
 Exactly computes the intersection of a pair of line segments as a homogeneous vector of non-overlapping increasing sequences.
 
+[![testling badge](https://ci.testling.com/mikolalysenko/exact-segment-intersect.png)](https://ci.testling.com/mikolalysenko/exact-segment-intersect)
+
+[![build status](https://secure.travis-ci.org/mikolalysenko/exact-segment-intersect.png)](http://travis-ci.org/mikolalysenko/exact-segment-intersect)
+
 # Example
 
 ```javascript
