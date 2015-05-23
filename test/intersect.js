@@ -75,3 +75,11 @@ tape("exact-intersect", function(t) {
 
   t.end()
 })
+
+tape('no isect', function(t) {
+  var isect = computeIntersection([-1, 10], [-10, 1], [10, 0], [10, 10]);
+
+  t.equal(isect[2][0], 0, 'no intersections')
+
+  t.end();
+})
