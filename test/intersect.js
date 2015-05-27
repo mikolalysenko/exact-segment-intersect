@@ -36,7 +36,7 @@ tape("exact-intersect", function(t) {
 
     var s = robustSum(robustDiff(p0, p1), p2)
     t.ok(validate(s), "validate s")
-    
+
     t.equals(robustCompare(s, [0]), 0, "check point on line")
   }
 
@@ -52,7 +52,7 @@ tape("exact-intersect", function(t) {
       for(var r=0; r<2; ++r) {
         for(var h=0; h<2; ++h) {
           var y = computeIntersection(
-            p[h][s], p[h][s^1], 
+            p[h][s], p[h][s^1],
             p[h^1][r], p[h^1][r^1])
           t.ok(validate(y[0]), "validate x")
           t.ok(validate(y[1]), "validate y")
@@ -78,6 +78,7 @@ tape("exact-intersect", function(t) {
 
 tape('no isect', function(t) {
   var isect = computeIntersection([-1, 10], [-10, 1], [10, 0], [10, 10]);
+
 
   t.equal(isect[2][0], 0, 'no intersections')
 

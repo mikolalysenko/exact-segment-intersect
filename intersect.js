@@ -6,6 +6,7 @@ var twoProduct = require("two-product")
 var robustSum = require("robust-sum")
 var robustScale = require("robust-scale")
 var compress = require("robust-compress")
+var robustIntersect = require("robust-segment-intersect")
 
 // Find solution to system of two linear equations
 //
@@ -18,6 +19,11 @@ var compress = require("robust-compress")
 //  |  x      y    1 |
 //
 function exactIntersect(a, b, c, d) {
+  
+  if(!robustIntersect(a, b, c, d)) {
+    return [ [0], [0], [0] ]
+  }
+
   var x1 = robustSum([c[1]], [-d[1]])
   var y1 = robustSum([-c[0]], [d[0]])
   var denom = robustSum(
@@ -27,11 +33,6 @@ function exactIntersect(a, b, c, d) {
       robustSum(
         robustScale(x1, a[0]),
         robustScale(x1, -b[0])))
-
-  //Check denominator
-  if(denom[0] === 0) {
-    return [ [0], [0], [0] ]
-  }
 
   var w0 = robustSum(twoProduct(-a[0], b[1]), twoProduct(a[1], b[0]))
   var w1 = robustSum(twoProduct(-c[0], d[1]), twoProduct(c[1], d[0]))
@@ -52,6 +53,6 @@ function exactIntersect(a, b, c, d) {
     robustSum(
       robustScale(w0, -c[1]),
       robustScale(w0, d[1])))
-  
+
   return [ compress(nX), compress(nY), compress(denom) ]
 }
