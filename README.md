@@ -1,4 +1,4 @@
-exact-segment-intersection
+exact-segment-intersect
 ==========================
 Exactly computes the intersection of a pair of line segments as a homogeneous vector of non-overlapping increasing sequences.
 
@@ -9,7 +9,7 @@ Exactly computes the intersection of a pair of line segments as a homogeneous ve
 # Example
 
 ```javascript
-var exactIntersect = require("exact-segment-intersection")
+var exactIntersect = require("exact-segment-intersect")
 
 var a = [-1,0]
 var b = [1,0]
@@ -28,12 +28,12 @@ Output:
 # Install
 
 ```
-npm install exact-segment-intersection
+npm install exact-segment-intersect
 ```
 
 # API
 
-#### `require("exact-segment-intersection")(a,b,c,d)`
+#### `require("exact-segment-intersect")(a,b,c,d)`
 Exactly computes the intersection of the line segments `[a,b]` and `[c,d]`
 
 * `a,b` are the vertices of the first segment
